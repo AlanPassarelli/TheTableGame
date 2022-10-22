@@ -7,11 +7,10 @@ let cantidadTotal = 0;
 let seguirComprando = false;
 
 do {
-producto = prompt(
-    "¿Que Juego queres comprar entre ellos estan: Erudito, Esquinados, Atenea, El Cinéfilo, Camarero, Melomano, Musa, Piramide del Sol, Saboteur, Caverna, Bituka y Catan?",
-    "Ej: Catan"
-);
-cantidad = parseInt(prompt("¿Cuantos queres comprar?"));
+producto = prompt("¿Que Juego queres comprar entre ellos estan: Erudito, Esquinados, Atenea, El Cinéfilo, Camarero, Melomano, Musa, Piramide del Sol, Saboteur, Caverna, Bituka y Catan?","Ej: Catan"
+).toUpperCase(); 
+
+cantidad = Number(prompt("¿Cuantos queres comprar?"));
 
   // Validaciones
 while (Number.isNaN(cantidad) || cantidad === 0) {
@@ -24,40 +23,40 @@ while (Number.isNaN(cantidad) || cantidad === 0) {
 }
 
 switch (producto) {
-    case "Erudito":
+    case "ERUDITO":
     precio = 2000;
     break;
-    case "Esquinados":
+    case "ESQUINADOS":
     precio = 1500;
     break;
-    case "Atenea":
+    case "ATENEA":
     precio = 2000;
     break;
-    case "El Cinefilo":
+    case "EL CINEFOLI":
     precio = 2000;
     break;
-    case "Camarero":
+    case "CAMARERO":
     precio = 2500;
     break;
-    case "Melomano":
+    case "MELOMANO":
     precio = 2000;
     break;
-    case "Musa":
+    case "MUSA":
     precio = 2000;
     break;
-    case "Piramide del Sol":
+    case "PIRAMIDE DE SOL":
     precio = 2500;
     break;
-    case "Saboteur":
+    case "SABOTEUR":
     precio = 2000;
     break;
-    case "Caverna":
+    case "CAVERNA":
     precio = 2000;
     break;
-    case "Bitoku":
+    case "BITOKU":
     precio = 2500;
     break;
-    case "Catan":
+    case "CATAN":
     precio = 2000;
     break;
 
@@ -75,7 +74,7 @@ seguirComprando = confirm("¿Queres agregar otro producto?");
 } while (seguirComprando);
 
 alert(
-"A comprado " + cantidadTotal + " productos y el total es: " + precioTotal
+"A comprado " + cantidadTotal +" " +producto +" el total es: $" + precioTotal
 );
 
 let finalizarCompra = confirm("¿Desea finalizar la compra?");
@@ -83,5 +82,5 @@ let finalizarCompra = confirm("¿Desea finalizar la compra?");
 if (finalizarCompra) {
 alert("Su compra se ha realizado con éxito!");
 } else {
-alert("Esperamos volver a verlo pronto.");
+alert("Aguardamos su Compra, lo esperamos volver a ver por el sitio");
 }
