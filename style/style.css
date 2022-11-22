@@ -1,0 +1,50 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+svg {color: rgb(254, 254, 253);}
+
+img {
+    width: 100%;
+}
+
+#producto-contenedor {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 
+
+#cesta-carrito {
+    border: none;
+    color: rgb(4, 4, 4);
+    font-size: 30px;
+    background-color: white;
+    border-radius: 30%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+
+#cesta-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+
+#cesta-carrito:focus {
+    outline: none;
+}
+  
+.img-carrito{
+  width:200px;
+  padding:20px;
+} 
+.modal-contenedor{
+  display:flex;
+  align-items: center;
+  gap:2rem;
+}
+
+.parrafo{
+  font-weight: 900;
+  font-style: italic;
+}
