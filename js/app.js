@@ -13,27 +13,29 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarCarrito();
 });
 
-productos.forEach((producto) => {
-  const div = document.createElement("div");
-  div.classList.add("card");
-  div.innerHTML += `<div class="card text-bg-secondary align-items-center" style="width: 18rem;">
-        <img src=${producto.img}>
-        <div class="card-body">
-            <h5 class="card-title text-center">${producto.nombre}</h5>
-            <h6 class="card-title text-center">$${producto.precio}</h6>
-        </div>
-        <div>
-        <button type="button" class="btn btn-secondary" id=boton${producto.id}>  Agregar  </button>
-        </div>
-    </div>
-            `;
-  contenedorProductos.appendChild(div);
 
-  const boton = document.getElementById(`boton${producto.id}`);
-  boton.addEventListener("click", () => {
-    agregarAlCarrito(producto.id);
+  productos.forEach((producto) => {
+    const div = document.createElement("div");
+    div.classList.add("card");
+    div.innerHTML += `<div class="card text-bg-secondary align-items-center" style="width: 18rem;">
+          <img src=${producto.img}>
+          <div class="card-body">
+              <h5 class="card-title text-center">${producto.nombre}</h5>
+              <h6 class="card-title text-center">$${producto.precio}</h6>
+          </div>
+          <div>
+          <button type="button" class="btn btn-secondary" id=boton${producto.id}>  Agregar  </button>
+          </div>
+      </div>
+              `;
+    contenedorProductos.appendChild(div);
+  
+    const boton = document.getElementById(`boton${producto.id}`);
+    boton.addEventListener("click", () => {
+      agregarAlCarrito(producto.id);
+    });
   });
-});
+
 
 vaciarCarrito.addEventListener ('click', () => {
 
@@ -58,8 +60,6 @@ const agregarAlCarrito = (prodId) => {
         carrito.push(item);
     }
 
-//   const item = productos.find((prod) => prod.id === prodId);
-//   carrito.push(item);
 
   mostrarCarrito();
 };
