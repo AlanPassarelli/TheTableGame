@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const mostrarProd = () => {
   productos.forEach((producto) => {
     const div = document.createElement("div");
     div.classList.add("card");
@@ -29,21 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
               `;
     contenedorProductos.appendChild(div);
-  
+
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener("click", () => {
       agregarAlCarrito(producto.id);
     });
   });
 
-
-vaciarCarrito.addEventListener ('click', () => {
+  vaciarCarrito.addEventListener ('click', () => {
 
     carrito.length = []
 
     mostrarCarrito ()
-
+    
 })
+}
+mostrarProd()
 
 const agregarAlCarrito = (prodId) => {
 

@@ -37,32 +37,17 @@
 
         <div class="container col-md-10">
 
-            <input id="inputTexto" class="form-control me-2" type="search" placeholder="Buscar Producto"
+            <input id="inputTexto" class="form-control me-2 mt-5 mb-3" type="search" placeholder="Buscar Producto"
             aria-label="Buscar Producto" >
-            <button>Buscar </button>
-            <button id="eliminar">Eliminar filtro </button>
+            <div class="d-flex gap-3 justify-content-center">
+                <button class="btn btn-outline-success">Buscar </button>
+                <button id="eliminar" class="btn btn-outline-danger">Eliminar filtro </button>  
+            </div>
 
 
-            <h2 class="d-flex justify-content-center mt-5"> Encontra el Juego que buscabas en The Table Game</h2>
-
-            <div class="container col-md-12 mt-5">
-                <div class="container col-md-12 d-flex justify-content-center gap-3 ">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Maldón</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                            checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Estratagema</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Devir</label>
-                    </div>
+            <h2 class="d-flex justify-content-center mt-5"> Encontra el juego que buscabas en The Table Game</h2>
 
 
-                </div>
                 <label for="customRange2" class="form-label">Rango de Precio</label>
                 <input type="range" class="form-range" min="$0" max="$3000" id="customRange2">
                 <div class="d-flex justify-content-center">
@@ -70,7 +55,7 @@
                 </div>
             </div>
 
-            <section id='producto-contenedor'></section>
+            <section id='producto-contenedor' class="container col-md-10"></section>
 
             <div class="container-xl">
                 <div class="modal" tabindex="-1" role="dialog" id="modal">
