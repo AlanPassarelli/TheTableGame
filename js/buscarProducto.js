@@ -46,7 +46,7 @@ const rangoPrecio = () => {
     
         let rangoPrecio = rango.value;
         let prodRango = productos.filter((producto) =>
-            producto.precio.includes(rangoPrecio))
+            producto.precio < rangoPrecio)
 
         prodRango.map((producto) => {
             contenedorProductos.innerHTML = ""
