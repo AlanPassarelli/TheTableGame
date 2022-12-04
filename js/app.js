@@ -5,7 +5,7 @@ const contenedorProductos = document.getElementById("producto-contenedor");
 const carritoNumero = document.querySelector("#cesta-carrito");
 const vaciarCarrito = document.querySelector('#vaciarCarrito');
 const precioTotal = document.querySelector('#precioTotal');
-
+const finalizarCompra = document.querySelector('#finalizarCompra');
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,11 +39,47 @@ const mostrarProd = () => {
 
   vaciarCarrito.addEventListener ('click', () => {
 
-    carrito.length = []
+    if (carrito.length === 0) {
+      Swal.fire({
+        title: "¡Tu carrito está vacio!",
+        text: "Compra algo para continuar con la compra",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+
+
+    } else {
+      carrito.length = []
+    }
+
 
     mostrarCarrito ()
     
 })
+
+
+finalizarCompra.addEventListener ('click', () => {
+  if ( carrito.length > 1) {
+    Swal.fire({
+      title: "Gracias por Tu compra",
+      text: "Tu Compra ha sido realizada con exito",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+  });
+
+
+  }
+
+  setTimeout ( () => {
+    window.location = "index.html"
+    localStorage.clear ()
+
+  },2000
+  )
+
+})
+
+
 }
 mostrarProd()
 

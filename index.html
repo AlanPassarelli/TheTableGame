@@ -38,9 +38,8 @@
         <div class="container col-md-10">
 
             <input id="inputTexto" class="form-control me-2 mt-5 mb-3" type="search" placeholder="Buscar Producto"
-            aria-label="Buscar Producto" >
+            aria-label="Buscar Producto">
             <div class="d-flex gap-3 justify-content-center">
-                <button class="btn btn-outline-success">Buscar </button>
                 <button id="eliminar" class="btn btn-outline-danger">Eliminar filtro </button>  
             </div>
 
@@ -48,10 +47,9 @@
             <h2 class="d-flex justify-content-center mt-5"> Encontra el juego que buscabas en The Table Game</h2>
 
 
-                <label for="customRange2" class="form-label">Rango de Precio</label>
-                <input type="range" class="form-range" min="$0" max="$3000" id="customRange2">
+                <input id="rangoDePrecio" type="range" min="0" max="3000" step="500" value="">Rango de Precio</input>
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-outline-success mb-5" type="submit">Aplicar</button>
+                    <button id='eliminaRango' class="btn btn-outline-success mb-5" type="submit">Eliminar Filtro de Precio</button>
                 </div>
             </div>
 
@@ -72,8 +70,8 @@
                                 <button type="button" class="btn btn-danger" id="vaciarCarrito">
                                     Vaciar carrito
                                 </button>
-                                <button type="button" id="procesarCompra" class="btn btn-primary">
-                                    Procesar compra
+                                <button type="button" id="finalizarCompra" class="btn btn-success">
+                                    Finalizar compra
                                 </button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                                     Cerrar

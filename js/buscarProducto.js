@@ -37,3 +37,44 @@ eliminarFiltro.addEventListener('click', () => {
     contenedorProductos.innerHTML = ""
     mostrarProd()
 })
+
+
+const rangoPrecio = () => {
+
+    let rango = document.getElementById("rangoDePrecio");
+    rango.addEventListener("mousemove", () => {
+    
+        let rangoPrecio = rango.value;
+        let prodRango = productos.filter((producto) =>
+            producto.precio.includes(rangoPrecio))
+
+        prodRango.map((producto) => {
+            contenedorProductos.innerHTML = ""
+            const div = document.createElement("div");
+            div.classList.add("card");
+            div.innerHTML += `<div class="card text-bg-secondary align-items-center" style="width: 18rem;">
+                  <img src=${producto.img}>
+                  <div class="card-body">
+                      <h5 class="card-title text-center">${producto.nombre}</h5>
+                      <h6 class="card-title text-center">$${producto.precio}</h6>
+                  </div>
+                  <div>
+                  <button type="button" class="btn btn-secondary" id=boton${producto.id}>  Agregar  </button>
+                  </div>
+              </div>
+                      `;
+            contenedorProductos.appendChild(div);
+
+
+        });
+    })
+}
+rangoPrecio()
+
+const eliminarRango = document.getElementById("eliminaRango")
+
+
+eliminarRango.addEventListener('click', () => {
+    contenedorProductos.innerHTML = ""
+    mostrarProd()
+})
