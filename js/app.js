@@ -1,4 +1,4 @@
-
+// inicio de App
 let carrito = [];
 
 const contenedorProductos = document.getElementById("producto-contenedor");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarCarrito();
 });
 
-
+// inicio de constante de  mostrar productos
 const mostrarProd = () => {
   productos.forEach((producto) => {
     const div = document.createElement("div");
@@ -36,6 +36,10 @@ const mostrarProd = () => {
       agregarAlCarrito(producto.id);
     });
   });
+
+  // Fin de constante mostrar producto
+
+  // inicio de funcionabilidad del carrito
 
   vaciarCarrito.addEventListener ('click', () => {
 
@@ -108,7 +112,7 @@ const mostrarCarrito = () => {
     modalBody.innerHTML = "";
     carrito.forEach((prod) => {
     const { id, nombre, precio, img, cantidad } = prod;
-    console.log(modalBody);
+
     modalBody.innerHTML += `
         <div class="modal-contenedor">
         <div>
@@ -152,3 +156,4 @@ function guardarstorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+// fin de funcionabilidad del carrito

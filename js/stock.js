@@ -1,3 +1,4 @@
+// stock de productos
 const productos = [
     { id: 1, nombre: "ERUDITO", precio: 1000,cantidad:1, img:'./Imagenes/el-erudito2-0ff9123ad9329bd6dd16488471344672-320-0.jpg' },
     { id: 2, nombre: "ESQUINADOS", precio: 500,cantidad:1, img:'./Imagenes/esquinados1-b66b5e9d013ca38b5916577253834697-320-0.jpg' },

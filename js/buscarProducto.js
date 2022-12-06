@@ -1,3 +1,5 @@
+// inicio de buscardor
+
 const buscador = () => {
 
     let inputTexto = document.getElementById("inputTexto");
@@ -40,7 +42,9 @@ eliminarFiltro.addEventListener('click', () => {
     mostrarProd()
 })
 
+// fin de buscador
 
+// inicio de filtro por rango de precio
 const rangoPrecio = () => {
 
     let rango = document.getElementById("rangoDePrecio");
@@ -81,3 +85,5 @@ eliminarRango.addEventListener('click', () => {
     contenedorProductos.innerHTML = ""
     mostrarProd()
 })
+
+//fin de filtro por rango de precio
