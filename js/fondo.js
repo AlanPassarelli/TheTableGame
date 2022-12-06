@@ -1,6 +1,6 @@
 const banner = document.querySelector('#banner')
 
-fetch('/fondo.json')
+fetch('../fondo.json')
     .then((response) => response.json())
     .then((fondo) => {
         fondo.forEach(imagen => {
